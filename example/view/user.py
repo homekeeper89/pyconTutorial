@@ -1,7 +1,8 @@
 # example/view/user.py
 from . import *
 
-@api_user.route('/', methods = ['GET', 'POST'])
+@api_user.route('/', methods = ['POST'])
 def user_register():
     data = json.loads(request.data)
-    return 'HELLO WORLD'
+    mock_database_write(data, USER_FILE)
+    return 'SUCCESS', 200

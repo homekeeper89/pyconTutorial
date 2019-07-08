@@ -27,7 +27,7 @@ def login_checker(standard):
         return True
     return False
 
-def test_user_login():
+def test_tutorial_login():
     for name, value in USER_LIST.items():
         assert login_checker(value['FAVORITE']), 'Not python user'
 
