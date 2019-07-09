@@ -4,3 +4,5 @@
 import pytest
 import json
 from example import create_app
+
+JSON_HEADER = {'content-type':"application/json"}
