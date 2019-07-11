@@ -1,7 +1,5 @@
 # copyright : homekeeper89@gmail.com
 # 플라스크 기본 구동 방법을 배우는 곳
-#
-#
 
 from flask import Flask
 
