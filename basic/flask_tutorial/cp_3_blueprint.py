@@ -1,5 +1,5 @@
 
-from flask import Blueprint, render_template, abort, Flask
+from flask import Blueprint,Flask
 
 my_page = Blueprint('my_page', __name__, url_prefix="/users")
 my_store = Blueprint('my_store', __name__)

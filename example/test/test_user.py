@@ -19,5 +19,5 @@ class TestUser:
             'PWD' :'BestPython'
         }
         API = '/user/{}'.format(data['EMAIL'])
-        res = flask_client.get(API,data=json.dumps(data))
+        res = flask_client.get(API,data=json.dumps(data), headers = JSON_HEADER)
         assert res.status_code == 200
