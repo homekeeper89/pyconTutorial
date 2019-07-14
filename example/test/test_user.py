@@ -5,7 +5,7 @@ class TestUser:
     def test_user_register(self, flask_client):
         API = '/user/'
         data = {
-            'EMAIL' : 'JAKE@gmail.com',
+            'EMAIL' : 'jake@gmail.com',
             'JOB' :'BackEnd',
             'FAVORITE' : 'Python',
             'PWD' :'BestPython'
@@ -15,7 +15,7 @@ class TestUser:
 
     def test_user_login(self, flask_client):
         data = {
-            'EMAIL' : 'JAKE@gmail.com',
+            'EMAIL' : 'jake@gmail.com',
             'PWD' :'BestPython'
         }
         API = '/user/{}'.format(data['EMAIL'])

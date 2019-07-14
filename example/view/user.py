@@ -11,15 +11,18 @@ def user_register():
 def user_login(usermail):
     req_data = request.json
 
-    def finder(condition, iter):
-        user_id = condition['EMAIL']
-        pwd = condition['PWD']
-        if iter.get('EMAIL') == user_id and iter.get('PWD') == pwd:
-            return iter
+    # def finder(condition, iter):
+    #     user_id = condition['EMAIL']
+    #     pwd = condition['PWD']
+    #     if iter.get('EMAIL') == user_id and iter.get('PWD') == pwd:
+    #         return iter
 
+    # data = mock_database_read(USER_FILE)
+    # res = list(filter(lambda dict_obj: finder(req_data, dict_obj), data.values()))
     data = mock_database_read(USER_FILE)
-    res = list(filter(lambda dict_obj: finder(req_data, dict_obj), data.values()))
+    for key, value in data.items():
+        if value['EMAIL'] == req_data['EMAIL'] and value['PWD'] == req_data['PWD']:
+            return jsonify({'EMAIL': value['EMAIL'], 'SERVER_MSG': 'LOGIN_SUCCESS'})
+
     
-    if not res:
-        return 'NO USER', 204
-    return usermail
+    return 'NO USER', 204 
