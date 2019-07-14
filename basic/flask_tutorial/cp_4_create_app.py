@@ -1,8 +1,11 @@
 from flask import Flask
 
 
-def create_app(config_filename):
+def create_app(config):
     app = Flask(__name__)
+
+    config = True if config == 'dev' else False
+    app.config['DEBUG'] = config
 
     from cp_3_view import my_page
     from cp_3_view import my_store

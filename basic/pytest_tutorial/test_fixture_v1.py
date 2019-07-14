@@ -7,7 +7,7 @@ def login():
     return {'NAME':'JAKE', 'AGE':11}
 
 def logout():
-    print("Delete user info")
+    print("Logout")
 
 def test_do_something_with_user_one():
     res = login()
@@ -19,4 +19,10 @@ def test_do_something_with_user_two():
     res = login()
     print(res)
     print("Do something others")
+    logout()
+
+def test_do_something_with_user_three():
+    res = login()
+    print(res)
+    print('Do something others')
     logout()

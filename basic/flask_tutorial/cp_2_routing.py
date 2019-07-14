@@ -1,7 +1,5 @@
 # copyright : homekeeper89@gmail.com
-# 플라스크 기본 구동 방법을 배우는 곳
-#
-#
+# routing : client의 요청을 내가 원하는 함수(control 또는  view)로 연결해주는 것
 
 from flask import Flask
 
@@ -24,8 +22,16 @@ def route_username(username):
     return 'I am ' + username
 
 @app.route('/page/<int:page>')
-def route_pate(page):
+def route_page(page):
     return 'I want this page ' + str(page)
 
+@app.route('/name/<string:name>')
+def route_name(name):
+    return 'I am route ' + name
+
+@app.route('/path/<path:whatever_any_path>')
+def route_any_path(whatever_any_path):
+    return 'I am path ' + whatever_any_path
+
 if __name__=='__main__':
-    app.run()
+    app.run(debug=True)

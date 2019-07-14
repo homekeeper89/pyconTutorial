@@ -12,19 +12,18 @@ from . import *
 # 로그 남기기 pytest -k function > test.log
 # pytest --junit-xml=report.xml | tee log_for_testers.log
 
+def test_name():
+    name = 'jake'
+    assert name == 'jake'
 
-def f():
-    return 3
+def test_age():
+    age = 31
+    assert age == 28
 
-def test_function():
-    assert f() == 4
+def test_hobby():
+    hobby = 'coding'
+    assert hobby == 'python'
 
-def test_random():
-    ran = random.randrange(1, 10)
-    ran_two = random.randrange(1, 10)
-    assert ran == ran_two, 'No, Its diff'
-
-class TestBasic:
-    def test_classBasic(self):
-        x = 10
-        assert x == 11
+def test_jake_hobby():
+    hobby = 'python'
+    assert hobby == 'python'
