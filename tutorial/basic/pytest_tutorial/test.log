@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.6.5, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
+rootdir: /Users/homekeeper/Desktop/playground/pycon/pyconTutorial/basic/pytest_tutorial
+collected 2 items
+
+cp_1_test.py FF                                                          [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_function _________________________________
+
+    def test_function():
+>       assert f() == 4
+E       assert 3 == 4
+E        +  where 3 = f()
+
+cp_1_test.py:16: AssertionError
+__________________________ TestBasic.test_classBasic ___________________________
+
+self = <pytest_tutorial.cp_1_test.TestBasic object at 0x107822240>
+
+    def test_classBasic(self):
+        x = 10
+>       assert x == 11
+E       assert 10 == 11
+
+cp_1_test.py:22: AssertionError
+- generated xml file: /Users/homekeeper/Desktop/playground/pycon/pyconTutorial/basic/pytest_tutorial/report.xml -
+=========================== 2 failed in 0.06 seconds ===========================

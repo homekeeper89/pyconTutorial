@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="2" name="pytest" skipped="0" tests="2" time="0.066"><testcase classname="cp_1_test" file="cp_1_test.py" line="14" name="test_function" time="0.001"><failure message="assert 3 == 4
+ +  where 3 = f()">def test_function():
+&gt;       assert f() == 4
+E       assert 3 == 4
+E        +  where 3 = f()
+
+cp_1_test.py:16: AssertionError</failure></testcase><testcase classname="cp_1_test.TestBasic" file="cp_1_test.py" line="19" name="test_classBasic" time="0.001"><failure message="assert 10 == 11">self = &lt;pytest_tutorial.cp_1_test.TestBasic object at 0x107822240&gt;
+
+    def test_classBasic(self):
+        x = 10
+&gt;       assert x == 11
+E       assert 10 == 11
+
+cp_1_test.py:22: AssertionError</failure></testcase></testsuite>
