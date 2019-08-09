@@ -22,6 +22,7 @@ STANDARD_DB = {
         'FAVORITE':'VUE'
     }
 }
+# scope가 돌아가는 것 제대로 확인해봐야함.
 
 @pytest.fixture(scope='session')
 def fixture_DB_sesison(request):
