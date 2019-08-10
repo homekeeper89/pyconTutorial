@@ -1,7 +1,7 @@
 # copyright : homekeeper89@gmail.com
 # routing : client의 요청을 내가 원하는 함수(control 또는  view)로 연결해주는 것
 
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
